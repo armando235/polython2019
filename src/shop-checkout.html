@@ -127,20 +127,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </div>
 
               <header class="subsection" visible$="[[_hasItems]]">
-                <h1>Checkout</h1>
-                <span>Shop is a demo app - form data will not be sent</span>
+                <h1>Pago</h1>
+                <span>Esta es una tienda demo</span>
               </header>
 
               <div class="subsection grid" visible$="[[_hasItems]]">
                 <section>
-                  <h2 id="accountInfoHeading">Account Information</h2>
+                  <h2 id="accountInfoHeading">Informacion de contacto</h2>
                   <div class="row input-row">
                     <shop-input>
                       <input type="email" id="accountEmail" name="accountEmail"
                           placeholder="Email" autofocus required
                           aria-labelledby="accountEmailLabel accountInfoHeading">
                       <shop-md-decorator error-message="Invalid Email" aria-hidden="true">
-                        <label id="accountEmailLabel">Email</label>
+                        <label id="accountEmailLabel">Correo</label>
                         <shop-underline></shop-underline>
                       </shop-md-decorator>
                     </shop-input>
@@ -151,12 +151,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                           placeholder="Phone Number" required
                           aria-labelledby="accountPhoneLabel accountInfoHeading">
                       <shop-md-decorator error-message="Invalid Phone Number" aria-hidden="true">
-                        <label id="accountPhoneLabel">Phone Number</label>
+                        <label id="accountPhoneLabel">Telefono</label>
                         <shop-underline></shop-underline>
                       </shop-md-decorator>
                     </shop-input>
                   </div>
-                  <h2 id="shipAddressHeading">Shipping Address</h2>
+                  <h2 id="shipAddressHeading">Direccion de envio</h2>
                   <div class="row input-row">
                     <shop-input>
                       <input type="text" id="shipAddress" name="shipAddress" pattern=".{5,}"
@@ -286,14 +286,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 </section>
 
                 <section>
-                  <h2>Payment Method</h2>
+                  <h2>Metodo de pago</h2>
                   <div class="row input-row">
                     <shop-input>
                       <input type="text" id="ccName" name="ccName" pattern=".{3,}"
                           placeholder="Cardholder Name" required
                           autocomplete="cc-name">
                       <shop-md-decorator error-message="Invalid Cardholder Name" aria-hidden="true">
-                        <label for="ccName">Cardholder Name</label>
+                        <label for="ccName">Propietario de la tarjeta</label>
                         <shop-underline></shop-underline>
                       </shop-md-decorator>
                     </shop-input>
@@ -304,14 +304,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                           placeholder="Card Number" required
                           autocomplete="cc-number">
                       <shop-md-decorator error-message="Invalid Card Number" aria-hidden="true">
-                        <label for="ccNumber">Card Number</label>
+                        <label for="ccNumber">Numero de la tarjeta</label>
                         <shop-underline></shop-underline>
                       </shop-md-decorator>
                     </shop-input>
                   </div>
                   <div class="row input-row">
                     <div class="column">
-                      <label for="ccExpMonth">Expiry</label>
+                      <label for="ccExpMonth">Fecha de expiracion</label>
                       <shop-select>
                         <select id="ccExpMonth" name="ccExpMonth" required
                              autocomplete="cc-exp-month" aria-label="Expiry month">
@@ -362,7 +362,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                       </shop-md-decorator>
                     </shop-input>
                   </div>
-                  <h2>Order Summary</h2>
+                  <h2>Resumen de compra</h2>
                   <dom-repeat items="[[cart]]" as="entry">
                     <template>
                       <div class="row order-summary-row">
@@ -386,7 +386,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <!-- Success message UI -->
         <header state="success">
-          <h1>Thank you</h1>
+          <h1>Gracias</h1>
           <p>[[response.successMessage]]</p>
           <shop-button responsive>
             <a href="/">Finish</a>
